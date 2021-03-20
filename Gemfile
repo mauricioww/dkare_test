@@ -6,6 +6,11 @@ ruby '2.7.0'
 # devise gem for authentication
 gem 'devise'
 
+# Fronted Bootstrap
+
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use sqlite3 as the database for Active Record
