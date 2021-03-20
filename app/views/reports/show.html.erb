@@ -1,0 +1,7 @@
+<h1> Your report number <%= params[:id] %>. </h1>
+
+<h3> Was created at: <%= @report.created_at.strftime('%F') %></h3>
+
+<p> The symptomps were: <%= @report.symptomps %> </p>
+
+<%= link_to 'Back', :back %>

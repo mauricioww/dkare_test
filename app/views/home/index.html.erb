@@ -1,2 +1,15 @@
-<h1>Welcome to Diagnostikare</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div>
+    <h2>Welcome back to Diagnostikare! </h2>
+    <%= link_to 'Report a new symptomp', new_report_path %>
+</div>
+
+<div>
+    <h1> Your reported symptomps: </h1>
+    <ul>
+        <% @reports.each do |report| %>
+            <li>
+                <p><%= link_to report.created_at.strftime('%F'), report %></p>
+            </li>
+        <% end %>
+    </ul>
+</div>
