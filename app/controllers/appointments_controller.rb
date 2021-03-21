@@ -1,15 +1,20 @@
 class AppointmentsController < ApplicationController
 
     def index
-        @appointments = Appointmet.all
+        @appointments = Appointment.all
     end
     
     def new
-        @appointment = Appointmet.new
+        @appointment = Appointment.new
     end
 
     def create
-        @appointment = current_user.appointments.build()
+        @appointment = current_user.appointments.build(appt_params)
+        if @appointment.save
+            redirect_to root_path, notice: 'Appoinment successfully created.'
+        else
+            render :new, status: :unprocessable_entity
+        end
     end
 
     private

@@ -13,3 +13,29 @@
         <% end %>
     </ul>
 </div>
+
+<% unless @past_apt.empty? %>
+    <div>
+        <h3> Your past appointments. </h3>
+        <ol>
+            <% @past_apt.each do |past| %>
+                <li>
+                    <p> <%= past.time.strftime('%F %H:%M') %> </p>
+                </li>
+            <% end %>
+        </ol>
+    </div>
+<% end %>
+
+<% unless @future_apt.empty? %>
+    <div>
+        <h3> Your future appointments. </h3>
+        <ol>
+            <% @future_apt.each do |future| %>
+                <li>
+                    <p> <%= future.time.strftime('%F %H:%M') %> </p>
+                </li>
+            <% end %>
+        </ol>
+    </div>
+<% end %>
