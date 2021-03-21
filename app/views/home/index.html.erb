@@ -1,19 +1,23 @@
 <div>
-    <h2>Welcome back to Diagnostikare! </h2>
+    <h2>Welcome back to Diagnostikare, <%= current_user.name.capitalize %>! </h2>
     <%= link_to 'Report a new symptomp', new_report_path %>
 </div>
 
-<div>
-    <h1> Your reported symptomps: </h1>
-    <ul>
-        <% @reports.each do |report| %>
-            <li>
-                <p><%= link_to report.created_at.strftime('%F'), report %></p>
-            </li>
-        <% end %>
-    </ul>
-</div>
+<%# if current user has not any registered report do not show nothing %>
+<% unless @reports.empty? %>
+    <div>
+        <h1> Your reported symptomps: </h1>
+        <ul>
+            <% @reports.each do |report| %>
+                <li>
+                    <p><%= link_to report.created_at.strftime('%F'), report %></p>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
 
+<%# if current user has not any past appointments do not show nothing%>
 <% unless @past_apt.empty? %>
     <div>
         <h3> Your past appointments. </h3>
@@ -27,6 +31,7 @@
     </div>
 <% end %>
 
+<%# if current user has not any future appointments do not show nothing%>
 <% unless @future_apt.empty? %>
     <div>
         <h3> Your future appointments. </h3>
