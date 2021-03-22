@@ -6,6 +6,9 @@ ruby '2.7.0'
 # devise gem for authentication
 gem 'devise'
 
+# Display images within the user's reposts
+gem 'image_processing', '~> 1.2'
+
 # Fronted Bootstrap
 
 gem 'bootstrap', '~> 4.0.0'

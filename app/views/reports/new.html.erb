@@ -5,19 +5,20 @@
     <div>
     <%= form_with(model: @report) do |form| %>
         
-        <div class="field">
-            <%= form.label :symptomps %>
-            <%= form.text_field :symptomps %>
+        <div class="field tex">
+            <%= form.rich_text_area :symptomps %>
             <% @report.errors.full_messages_for(:symptomps).each do |message| %>
                 <div><%= message %></div>
             <% end %>
         </div>
+
+        <br/>
 
         <div class="actions">
             <%= form.submit %>
         </div>
 
     <% end %>
-
+    <br>
     <%= link_to 'Back', :back %>
 </div>
