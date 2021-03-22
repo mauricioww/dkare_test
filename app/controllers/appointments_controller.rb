@@ -12,6 +12,7 @@ class AppointmentsController < ApplicationController
     def create
         @appointment = current_user.appointments.build(appt_params)
         if @appointment.save
+            AppointmentMailer.with(appointment: @appointment).notification_apt(current_user).deliver
             redirect_to root_path, notice: 'Appoinment successfully created.'
         else
             render :new, status: :unprocessable_entity
