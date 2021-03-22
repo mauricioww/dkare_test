@@ -1,24 +1,27 @@
-<div class="text-center">
-    <h2 > Write the most important symptomps you have.  </h2>
+<div class="text-center align-middle">
+    <br/><br/>
+    <h2 style="font-weight: bolder; background-color: white;"> Write the most important symptomps you have.  </h2>
     <div class="container">
         <hr>
     <div>
-    <%= form_with(model: @report) do |form| %>
-        
-        <div class="field tex">
-            <%= form.rich_text_area :symptomps %>
-            <% @report.errors.full_messages_for(:symptomps).each do |message| %>
-                <div><%= message %></div>
-            <% end %>
-        </div>
+    <div class="container p-3 my-3 border back text_area text-left">
+        <%= form_with(model: @report) do |form| %>
+            
+            <div class="field tex">
+                <%= form.rich_text_area :symptomps %>
+                <% @report.errors.full_messages_for(:symptomps).each do |message| %>
+                    <div><%= message %></div>
+                <% end %>
+            </div>
 
-        <br/>
+            <br/>
 
-        <div class="actions">
-            <%= form.submit %>
-        </div>
+            <div class="actions">
+                <%= form.submit %>
+            </div>
 
-    <% end %>
-    <br>
+        <% end %>
+        <br>
+    </div>
     <%= link_to 'Back', :back %>
 </div>

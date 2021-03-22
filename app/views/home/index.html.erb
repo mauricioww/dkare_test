@@ -1,7 +1,10 @@
 
     <div class="text-center">
-            <h2>Welcome back to Diagnostikare, <%= current_user.name.capitalize %>! </h2>
-            <%= link_to 'Report a new symptomp', new_report_path %>
+        <h2>Welcome back to Diagnostikare, <%= current_user.name.capitalize %>! </h2>
+        <button type="button" class="btn default" style="border-radius: 5px;">
+            <%= link_to 'Report a new symptomp', new_report_path %>    
+        </button>
+                
     </div>
 
     <%# if current user has not any registered report do not show nothing %>
@@ -9,13 +12,13 @@
         <div class="text-center">
             <h1> Your reported symptomps: </h1>
             <div class="d-flex justify-content-center">
-                <ul>
+                <div class="btn-group-vertical">
                     <% @reports.each do |report| %>
-                        <li>
-                            <p><%= link_to report.created_at.strftime('%F'), report %></p>
-                        </li>
+                            <button type="button" class="btn default" style="border-radius: 5px;">
+                                <%= link_to report.created_at.strftime('%F'), report %>
+                            </button>
                     <% end %>
-                </ul>
+                </div>
             </div>
         </div>
     <% end %>
