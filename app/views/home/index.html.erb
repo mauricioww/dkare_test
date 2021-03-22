@@ -1,46 +1,41 @@
-<div>
-    <h2>Welcome back to Diagnostikare, <%= current_user.name.capitalize %>! </h2>
-    <%= link_to 'Report a new symptomp', new_report_path %>
-</div>
 
-<%# if current user has not any registered report do not show nothing %>
-<% unless @reports.empty? %>
-    <div>
-        <h1> Your reported symptomps: </h1>
-        <ul>
-            <% @reports.each do |report| %>
-                <li>
-                    <p><%= link_to report.created_at.strftime('%F'), report %></p>
-                </li>
-            <% end %>
-        </ul>
+    <div class="text-center">
+            <h2>Welcome back to Diagnostikare, <%= current_user.name.capitalize %>! </h2>
+            <%= link_to 'Report a new symptomp', new_report_path %>
     </div>
-<% end %>
 
-<%# if current user has not any past appointments do not show nothing%>
-<% unless @past_apt.empty? %>
-    <div>
-        <h3> Your past appointments. </h3>
-        <ol>
-            <% @past_apt.each do |past| %>
-                <li>
-                    <p> <%= past.time.strftime('%F %H:%M') %> </p>
-                </li>
-            <% end %>
-        </ol>
-    </div>
-<% end %>
+    <%# if current user has not any registered report do not show nothing %>
+    <% unless @reports.empty? %>
+        <div class="text-center">
+            <h1> Your reported symptomps: </h1>
+            <div class="d-flex justify-content-center">
+                <ul>
+                    <% @reports.each do |report| %>
+                        <li>
+                            <p><%= link_to report.created_at.strftime('%F'), report %></p>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    <% end %>
 
-<%# if current user has not any future appointments do not show nothing%>
-<% unless @future_apt.empty? %>
-    <div>
-        <h3> Your future appointments. </h3>
-        <ol>
-            <% @future_apt.each do |future| %>
-                <li>
-                    <p> <%= future.time.strftime('%F %H:%M') %> </p>
-                </li>
-            <% end %>
-        </ol>
-    </div>
-<% end %>
+    <%# if current user has not any past appointments do not show nothing%>
+    <% unless @past_apts.empty? %>
+        <div class="d-flex justify-content-center">
+            <div class="col-md-6 justify-content-center row">
+                <h3 class="row justify-content-center"> Your past appointments. </h3>
+                <%= render './appointments/show', appointments: @past_apts %> 
+            </div>
+        </div>
+    <% end %>
+
+    <%# if current user has not any future appointments do not show nothing%>
+    <% unless @future_apts.empty? %>
+        <div class="d-flex justify-content-center">
+            <div class="col-md-6 justify-content-center row">
+                <h3 class="row justify-content-center"> Your future appointments. </h3>
+                <%= render './appointments/show', appointments: @future_apts %> 
+            </div>
+        </div>
+    <% end %>
