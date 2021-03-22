@@ -1,16 +1,18 @@
 
-    <div class="text-center">
-        <h2>Welcome back to Diagnostikare, <%= current_user.name.capitalize %>! </h2>
+    <br/><br/>
+    <div class="text-center" >
+        <h2 style="font-weight: bolder; background-color: white;">Welcome back to Diagnostikare, <%= current_user.name.capitalize %>! </h2>
         <button type="button" class="btn default" style="border-radius: 5px;">
             <%= link_to 'Report a new symptomp', new_report_path %>    
         </button>
                 
     </div>
 
+    <br/>
     <%# if current user has not any registered report do not show nothing %>
     <% unless @reports.empty? %>
         <div class="text-center">
-            <h1> Your reported symptomps: </h1>
+            <h1 style="font-weight: bolder; background-color: white;"> Your reported symptomps: </h1>
             <div class="d-flex justify-content-center">
                 <div class="btn-group-vertical">
                     <% @reports.each do |report| %>
@@ -27,7 +29,7 @@
     <% unless @past_apts.empty? %>
         <div class="d-flex justify-content-center">
             <div class="col-md-6 justify-content-center row">
-                <h3 class=" justify-content-center"> Your past appointments. </h3>
+                <h3 class=" justify-content-center" style="font-weight: bolder; background-color: white;"> Your past appointments. </h3>
                 <%= render './appointments/show', appointments: @past_apts %> 
             </div>
         </div>
