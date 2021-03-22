@@ -3,3 +3,22 @@
 
 @import "bootstrap";
 @import "./actiontext.scss";
+
+.img-back {
+    height: 100%; 
+    background-image: url('back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text_area {
+    background-color: white;
+    border-radius: 20px;
+    border-color: rgb(247, 232, 25);
+    border-width: 15px;
+}
+
+.table_style {
+    border-radius: 10px;
+}

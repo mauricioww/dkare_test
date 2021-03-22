@@ -1,15 +1,16 @@
 <div class="text-center">
 
-    <h1> This is your report information. </h1>
+    <h1 style="font-weight: bolder; background-color: white;"> This is your report information. </h1>
 
     <div class="container">
-        <hr>
+        <hr style="color: black;">
     <div>
 
-    <h3> Was created at: <%= @report.created_at.strftime('%F') %></h3>
+    <div class="container p-3 my-3 border back text_area">
+        <h3 style="font-weight: bolder; background-color: white;" > Was created at: <%= @report.created_at.strftime('%F') %></h3>
 
-    <p> The symptomps were: <%= @report.symptomps %> </p>
+        <p > The symptomps were: <%= @report.symptomps %> </p>
 
-    <%= link_to 'Back', root_path %>
-
+        <%= link_to 'Back', root_path %>
+    </div>
 </div>

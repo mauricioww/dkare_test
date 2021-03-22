@@ -9,9 +9,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'shared/navbar' %>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+  <body class="img-back">
+      <%= render 'shared/navbar' %>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
   </body>
 </html>

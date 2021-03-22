@@ -1,19 +1,22 @@
-<h1>Appointment format!</h1>
+<div class="text-center">
+    <h1 style="font-weight: bolder; background-color: white;">Set the appointment time.</h1>
+        <div class="container p-3 my-3 border back text_area">
+            <%= form_with(model: @appointment) do |form| %>
 
-<%= form_with(model: @appointment) do |form| %>
-    
-    <div class="field">
-        <%= form.label :time %>
-        <%= form.datetime_select :time %>
-        <% @appointment.errors.full_messages_for(:time).each do |message| %>
-            <div><%= message %></div>
-        <% end %>
-    </div>
+            <div class="field">
+                <%= form.label :time %>
+                <%= form.datetime_select :time %>
+                <% @appointment.errors.full_messages_for(:time).each do |message| %>
+                    <div><%= message %></div>
+                <% end %>
+            </div>
 
-    <div class="actions">
-        <%= form.submit %>
-    </div>
+            <div class="actions">
+                <%= form.submit %>
+            </div>
 
-<% end %>
+            <% end %>
+        </div>
 
-<%= link_to 'Back', :back %>
+    <%= link_to 'Back', :back %>
+</div>
