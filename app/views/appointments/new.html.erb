@@ -1,6 +1,7 @@
 <div class="text-center">
     <h1 style="font-weight: bolder; background-color: white;">Set the appointment time.</h1>
         <div class="container p-3 my-3 border back text_area">
+
             <%= form_with(model: @appointment) do |form| %>
 
             <div class="field">
@@ -11,11 +12,20 @@
                 <% end %>
             </div>
 
+
+            <div class="field">
+                <%= form.label 'Select an available doctor' %>
+                <%= form.select :doctor_id, @doctors.collect{|doc| [doc.name, doc.id]}, class: "custom-select mr-sm-2" %>
+            </div>
+
+            <br/>
+
             <div class="actions">
                 <%= form.submit %>
             </div>
 
             <% end %>
+
         </div>
 
     <%= link_to 'Back', :back %>

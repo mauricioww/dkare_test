@@ -6,6 +6,7 @@ class AppointmentsController < ApplicationController
     
     def new
         @appointment = Appointment.new
+        @doctors = Doctor.all
     end
 
     def create
@@ -19,6 +20,6 @@ class AppointmentsController < ApplicationController
 
     private
         def appt_params
-            params.require(:appointment).permit(:time, :user_id)
+            params.require(:appointment).permit(:time, :user_id, :doctor_id)
         end
 end
