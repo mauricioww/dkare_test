@@ -1,24 +1,31 @@
-# README
+# Diagnostikare App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was carried out according to the specifications given by Diagnostikare. In this repository, you can find the source code of an Ruby on Rails APP that was developed based on a design provided by the same Diagnostikare team, whose purpose is to evaluate the performance of the applicants to the job offered by the company.
 
-Things you may want to cover:
+![Index](https://github.com/mauricioww/dkare_test/blob/master/public/main.png)
 
-* Ruby version
+![Login](https://github.com/mauricioww/dkare_test/blob/master/public/login.png)
 
-* System dependencies
+![SignUp](https://github.com/mauricioww/dkare_test/blob/master/public/register.png)
 
-* Configuration
+![Reports](https://github.com/mauricioww/dkare_test/blob/master/public/reported.png)
 
-* Database creation
+## Built With
 
-* Database initialization
+- HTML
+- BOOTSTRAP
+- RUBY ON RAILS
 
-* How to run the test suite
+## Author
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Mauricio Carpintero**
 
-* Deployment instructions
+- Github: [@emiliocm9](https://github.com/mauricioww)
+- Email: [email](marcos_c79@hotmail.com)
+- Linkedin: [@linkedin](https://www.linkedin.com/in/mauriciow1001/)
 
-* ...
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/)
