@@ -20,7 +20,7 @@ This project was carried out according to the specifications given by Diagnostik
 
 👤 **Mauricio Carpintero**
 
-- Github: [@emiliocm9](https://github.com/mauricioww)
+- Github: [@mauricioww](https://github.com/mauricioww)
 - Email: [email](marcos_c79@hotmail.com)
 - Linkedin: [@linkedin](https://www.linkedin.com/in/mauriciow1001/)
 
