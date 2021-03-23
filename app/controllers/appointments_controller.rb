@@ -9,8 +9,11 @@ class AppointmentsController < ApplicationController
         @doctors = Doctor.all
     end
 
+    def show
+    end
+
     def create
-        @appointment = current_user.appointments.build(appt_params)
+        @appointment = current_user.appointments.build(apt_params)
         if @appointment.save
             AppointmentMailer.with(appointment: @appointment).notification_apt(current_user).deliver
             redirect_to root_path, notice: 'Appoinment successfully created.'
@@ -20,7 +23,7 @@ class AppointmentsController < ApplicationController
     end
 
     private
-        def appt_params
+        def apt_params
             params.require(:appointment).permit(:time, :user_id, :doctor_id)
         end
 end

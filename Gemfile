@@ -14,6 +14,10 @@ gem 'image_processing', '~> 1.2'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
+# Testing gem
+gem 'minitest-rails', '~> 6.1'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
 # Use sqlite3 as the database for Active Record
