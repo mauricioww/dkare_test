@@ -1,6 +1,6 @@
 # Diagnostikare App
 
-This project was carried out according to the specifications given by Diagnostikare. In this repository, you can find the source code of an Ruby on Rails APP that was developed based on a design provided by the same Diagnostikare team, whose purpose is to evaluate the performance of the applicants to the job offered by the company.
+Medical web application for DiagnostiKare.
 
 ![Index](https://github.com/mauricioww/dkare_test/blob/master/public/main.png)
 
@@ -23,9 +23,5 @@ This project was carried out according to the specifications given by Diagnostik
 - Github: [@mauricioww](https://github.com/mauricioww)
 - Email: [email](marcos_c79@hotmail.com)
 - Linkedin: [@linkedin](https://www.linkedin.com/in/mauriciow1001/)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/)
